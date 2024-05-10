@@ -29,7 +29,7 @@ class MahasiswaController extends Controller
         $validusername =  ['andi','rani','lisa','joko'];
         if (in_array($request->username, $validusername)){
             session(['username' => $request->username]);
-            return redirect('/daftarmahasiswa');
+            return redirect('/daftarMahasiswa');
         }else{
             // Username tidak ada di daftar
             return back()->withInput()->with('pesan',"Username tidak valid");
